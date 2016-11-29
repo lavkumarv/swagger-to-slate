@@ -16,14 +16,14 @@ var options = [{
         name: 'input',
         abbr: 'i',
         boolean: true,
-        help: 'Input file name (Default file name is swagger.json)',
+        help: 'Input file name with path (Default file name is swagger.json)',
         Default: './swagger.json'
     },
     {
         name: 'output',
         abbr: 'o',
         boolean: true,
-        help: 'Output file name (Default file name is swagger.md)',
+        help: 'Output file name with path (Default file name is swagger.md)',
         Default: './swagger.md'
     }
 ];
