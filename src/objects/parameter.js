@@ -26,7 +26,7 @@ function parse(parameters, pathParameters){
 
             line.push(keys.required ? 'Yes' : 'No') 
             line.push('type' in keys
-                ? transformDataTypes(keys.type, keys.format || null)
+                ? DataTypes(keys.type, keys.format || null)
                 : '') 
 
             res.push(`|${line.map(el => ` ${el} `).join('|')}|`) 

@@ -37,7 +37,7 @@ function convertToMd(input, output) {
 
             // Process external doc object
             if ('externalDocs' in inputDoc) {
-                mdDoc.push(ExternalDocs.parse(inputDoc.externalDocs))
+                mdDoc.push(ExternalDocs(inputDoc.externalDocs))
             }
 
             // Process Security definitions object
