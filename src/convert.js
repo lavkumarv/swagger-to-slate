@@ -1,10 +1,10 @@
 // Included packages
 const yaml = require('js-yaml')
 const fs = require('fs') 
-const Info = require('./Objects/info') 
-const Path = require('./Objects/path') 
-const SecurityDefinitions = require('./Objects/securityDefinitions') 
-const ExternalDocs = require('./Objects/externalDocs') 
+const Info = require('./objects/info') 
+const Path = require('./objects/path') 
+const SecurityDefinitions = require('./objects/securityDefinitions') 
+const ExternalDocs = require('./objects/externalDocs') 
 
 // Wrapper function for the markdown method
 function convertToMd(input, output) { 
