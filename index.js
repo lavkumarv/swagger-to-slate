@@ -27,7 +27,7 @@ if (argv.version) {
 
     //if help command is executed
     var pkgInfo = package.name + ' - ' + package.version + '\n'
-    process.stdout.write(help(pkgInfo, cliclopts.usage()))
+    process.stdout.write(help(pkgInfo, cliclopts.options()))
     process.exit(0)
 
 } else {
@@ -35,8 +35,7 @@ if (argv.version) {
     // read the arguments
     var input = argv.input
     var output = argv.output
-    const rs = fs.createReadStream(input)
-    convertToMd(rs, output)
+    convertToMd(input, output)
     process.exit(0)
 
 }
