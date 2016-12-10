@@ -5,4 +5,4 @@ function help(pkgInfo, usage) {
 
 }
 
-module.exports = help;
+ module.exports = help;

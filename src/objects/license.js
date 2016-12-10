@@ -5,24 +5,24 @@
 // To parse the license object
 function parse(license){
 
-    const res = [];
+    const res = [] 
 
     if ('url' in license || 'name' in license) {
 
-        res.push('**License:** ');
+        res.push('**License:** ') 
 
         if ('url' in license && 'name' in license) {
-            res.push(`[${license.name}] (${license.url})`);
+            res.push(`[${license.name}] (${license.url})`) 
         }
         else {
-            res.push(license.name || license.url);
+            res.push(license.name || license.url) 
         }
 
-        res.push('\n');
+        res.push('\n') 
     }
 
-    return res.length > 0 ? res.join('') : null;
+    return res.length > 0 ? res.join('') : null 
 }
 
 // export the license file
-module.exports = parse;
+module.exports = parse 
