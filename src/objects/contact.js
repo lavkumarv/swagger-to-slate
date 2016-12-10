@@ -27,4 +27,4 @@ function parse(contact){
 }
 
 // export the function
-module.exports = parse
+module.exports = {parse}

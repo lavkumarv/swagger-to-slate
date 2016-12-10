@@ -42,4 +42,4 @@ function parse(info){
 }
 
 // Export the parse object
-module.exports = parse
+module.exports = {parse}

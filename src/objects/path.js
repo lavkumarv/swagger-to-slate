@@ -1,6 +1,6 @@
 // Import objects
 const responses = require('./responses') 
-const parameters = require('./parameters') 
+const parameters = require('./parameter') 
 
 // Allowed HTTP method
 const ALLOWED_METHODS = ['get', 'post', 'put', 'patch', 'delete', 'options'] 
@@ -67,4 +67,4 @@ function search(needle, haystack) {
   return false 
 } 
 
-module.exports = parse
+module.exports = {parse}

@@ -54,6 +54,4 @@ function parse(securityDefinitions) {
 }
 
 // exports
-module.exports =  parse
-module.exports.nameResolver = nameResolver 
-module.exports.typeResolver = typeResolver 
+module.exports =  {parse, nameResolver, typeResolver}

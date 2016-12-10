@@ -27,14 +27,14 @@ if (argv.version) {
 
     //if help command is executed
     var pkgInfo = package.name + ' - ' + package.version + '\n'
-    process.stdout.write(help(pkgInfo, cliclopts.options()))
+    process.stdout.write(help(pkgInfo, cliArg.usage()))
     process.exit(0)
 
 } else {
 
     // read the arguments
-    var input = argv.input
-    var output = argv.output
+    var input = argv._[0]
+    var output = argv._[1]
     convertToMd(input, output)
     process.exit(0)
 

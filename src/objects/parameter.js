@@ -9,7 +9,8 @@ function parse(parameters, pathParameters){
     res.push('| ---- | ---------- | ----------- | -------- | ---- |') 
     
     // Maps the parameters and set values into the parameters value line
-    [].concat(pathParameters, parameters).map(keys => {
+    var arr =[]
+    arr.concat(pathParameters, parameters).map(keys => {
 
         if (keys) {
 
@@ -35,4 +36,4 @@ function parse(parameters, pathParameters){
 }
 
 // Export the parse method of parameters object
-module.exports = parse
+module.exports = {parse}

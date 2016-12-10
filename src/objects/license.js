@@ -25,4 +25,4 @@ function parse(license){
 }
 
 // export the license file
-module.exports = parse 
+module.exports = {parse}

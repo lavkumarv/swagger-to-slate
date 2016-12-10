@@ -13,4 +13,4 @@ function parse(responses) {
     return res.join('\n') 
 }
 
-module.exports = parse
+module.exports = {parse}
