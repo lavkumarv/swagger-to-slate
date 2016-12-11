@@ -23,7 +23,7 @@ var options = [{
         name: 'output',
         abbr: 'o',
         boolean: true,
-        help: 'Output file name with full path (Default file name is swagger.md)',
+        help: 'Output file name with full path (Default file name is same as input file)',
         Default: './swagger.md'
     }
 ];

@@ -26,10 +26,10 @@
   },
   "dependencies": {
     "cliclopts": "^1.1.1",
-    "concat-stream": "^1.5.1",
     "minimist": "^1.2.0",
-    "virtual-dom": "^2.1.1",
-    "yamljs": "^0.2.5",
     "js-yaml" : "^3.7.0"
+  },
+  "bin": {
+    "swagger-to-slate": "index.js"
   }
 }

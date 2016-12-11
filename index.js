@@ -1,9 +1,7 @@
 // Included packages
 const cliclopts = require('cliclopts')
-const concat = require('concat-stream')
 const fs = require('fs')
 const minimist = require('minimist')
-const util = require('util')
 
 //custom files import
 const package = require('./package.json')
@@ -42,8 +40,6 @@ if (argv.version) {
 
     if(argv.output)
         output = argv._[1]
-    else
-        output = 'swagger.md'
         
     convertToMd(input, output)
     process.exit(0)
