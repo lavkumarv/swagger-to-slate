@@ -37,7 +37,7 @@ function convertToMd(input, output) {
 
             // Process external doc object
             if ('externalDocs' in inputDoc) {
-                mdDoc.push(ExternalDocs(inputDoc.externalDocs))
+                mdDoc.push(ExternalDocs.parse(inputDoc.externalDocs))
             }
 
             // Process Security definitions object
@@ -51,6 +51,9 @@ function convertToMd(input, output) {
                     path => mdDoc.push(Path.parse(path, inputDoc.paths[path]))
                 ) 
             }
+
+            mdDoc.push(`<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->\n`)
+            
             fs.writeFileSync(outputFile, mdDoc.join('\n')) 
         } catch (e) {
             console.log(e) 

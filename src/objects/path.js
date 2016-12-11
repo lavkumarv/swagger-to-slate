@@ -13,8 +13,7 @@ function parse(path, data) {
   if (path && data) {
 
     // Make path as a header
-    res.push(`### ${path}`) 
-    res.push('---') 
+    res.push(`# ${path.toUpperCase()}`) 
 
     // Check if parameter for path are in the place
     if ('parameters' in data) {
@@ -25,8 +24,9 @@ function parse(path, data) {
     Object.keys(data).map(method => {
 
       if (search(method, ALLOWED_METHODS)) {
+
         // Set method as a subheader
-        res.push(`##### ***${method.toUpperCase()}***`) 
+        res.push(`## ***${method.toUpperCase()}*** \n`) 
         const pathInfo = data[method] 
 
         // Set summary
@@ -38,6 +38,9 @@ function parse(path, data) {
         if ('description' in pathInfo) {
           res.push(`**Description:** ${pathInfo.description}\n`) 
         }
+
+        // Set path
+        res.push(`### HTTP Request \n\`***${method.toUpperCase()}*** ${path}\` \n`)
 
         // Build parameters
         if ('parameters' in pathInfo || pathParameters) {
@@ -55,11 +58,11 @@ function parse(path, data) {
 } 
 
 // To search entry into array
-function search(needle, haystack) {
-  if (haystack === undefined || haystack === null) return false 
-  if (haystack.length) {
-    for (let i = 0;  i < haystack.length;  i++) {
-      if (needle === haystack[i]) {
+function search(key, array) {
+  if (array === undefined || array === null) return false 
+  if (array.length) {
+    for (let i = 0;  i < array.length;  i++) {
+      if (key === array[i]) {
         return true 
       }
     }

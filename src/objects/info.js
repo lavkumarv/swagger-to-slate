@@ -1,11 +1,3 @@
-/**
- * http://swagger.io/specification/#infoObject
-**/
-
-// Included objects from swagger
-const Contact = require('./contact') 
-const License = require('./license') 
-
 // To parse the info object
 function parse(info){
 
@@ -14,9 +6,29 @@ function parse(info){
 
     if (info !== null && typeof info === 'object') {
 
+        res.push(`--- \n`)
+
+        // Set the title of the doc
         if ('title' in info) {
-            res.push(`${info.title} \n ${Array(info.title.length + 1).join('=')}`) 
+            res.push(`title: ${info.title} \n`)
         }
+
+        // Set the language tab
+        res.push(`language_tabs: \n   - shell \n`)
+
+        // Set the footer
+        res.push(`toc_footers: \n   - <a href='#'>Sign Up for a Developer Key</a> \n   - <a href='https://github.com/lavkumarv'>Documentation Powered by lav</a> \n`)
+        
+        // Include the error codes
+        res.push(`includes: \n   - errors \n`)
+
+        // Include the search options
+        res.push(`search: true \n`)
+
+        res.push(`--- \n`)
+
+        // Introduction part
+        res.push(`# Introduction \n`)
 
         if ('description' in info) {
             res.push(`${info.description} \n`) 
@@ -26,17 +38,6 @@ function parse(info){
             res.push(`**Version:** ${info.version} \n`) 
         }
 
-        if ('termsOfService' in info) {
-            res.push(`**Terms of service:**  \n ${info.termsOfService} \n`) 
-        }
-
-        if ('contact' in info) {
-            res.push(Contact.parse(info.contact)) 
-        }
-
-        if ('license' in info) {
-            res.push(License.parse(info.license)) 
-        }
     }
     return res.length ? res.join('\n') : null 
 }
