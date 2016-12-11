@@ -1,6 +1,6 @@
 {
   "name": "swagger-to-slate",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Node module which converts the swagger spec file (json or yaml ) into slate markdown.",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,6 @@
     "js-yaml" : "^3.7.0"
   },
   "bin": {
-    "swagger-to-slate": "index.js"
+    "swagger-to-slate": "./index.js"
   }
 }

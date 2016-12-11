@@ -1,7 +1,9 @@
+#!/usr/bin/env node
+
 // Included packages
-const cliclopts = require('cliclopts')
-const fs = require('fs')
-const minimist = require('minimist')
+const cliclopts = require('cliclopts');
+const fs = require('fs');
+const minimist = require('minimist');
 
 //custom files import
 const package = require('./package.json')

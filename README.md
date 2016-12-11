@@ -6,13 +6,11 @@ A node module which converts the swagger specification file (Both Json and Yaml)
 * [slate](https://github.com/lord/slate) - Beautiful static documentation for your API.
 
 ## Getting Started
-    ```
-    Options: 
+    ```Options: 
     --help, -h            Output usage information
     --version, -v         Output the version of the tool
     --input, -i           Input file name with full path (Default file name is swagger.json)
-    --output, -o          Output file name with full path (Default file name is same as input file)
-    ```
+    --output, -o          Output file name with full path (Default file name is same as input file)```
 
 ### Prerequisites
 
@@ -35,11 +33,11 @@ You need to install this module gloablly inorder to call it by name.
 
 ### Convert the file
 
-``` swagger-to-slate -i /home/user/Desktop/swagger.json```
-``` swagger-to-slate -i /home/user/Desktop/swagger.yaml```
+``` swagger-to-slate -i /home/user/Desktop/swagger.json``` \n
+``` swagger-to-slate -i /home/user/Desktop/swagger.yaml``` \n
 It will generate the output file in same path with same file name. Eg. swagger.md
 
-``` swagger-to-slate -i /home/user/Desktop/filename.json -o /home/user/Desktop/xyz.md```
+``` swagger-to-slate -i /home/user/Desktop/filename.json -o /home/user/Desktop/xyz.md```\n
 It will generate the output file in given path with given output file name.
 
 ## Authors
