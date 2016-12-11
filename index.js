@@ -32,9 +32,19 @@ if (argv.version) {
 
 } else {
 
+    var input, output
+
     // read the arguments
-    var input = argv._[0]
-    var output = argv._[1]
+    if(argv.input)
+        input = argv._[0]
+    else
+        input = 'swagger.json'
+
+    if(argv.output)
+        output = argv._[1]
+    else
+        output = 'swagger.md'
+        
     convertToMd(input, output)
     process.exit(0)
 

@@ -27,6 +27,9 @@ function convertToMd(input, output) {
                 inputDoc = yaml.safeLoad(fs.readFileSync(input, 'utf8'))
             }
             
+            if(!inputDoc)
+                throw "Can't read the file: " + input + "\n    Please provide the full path of the files."
+
             // Output file name
             const outputFile = output || input.replace(/(yaml|json)$/i, 'md')
 
