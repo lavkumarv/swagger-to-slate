@@ -33,11 +33,14 @@ You need to install this module gloablly inorder to call it by name.
 
 ### Convert the file
 
-``` swagger-to-slate -i /home/user/Desktop/swagger.json``` \n
-``` swagger-to-slate -i /home/user/Desktop/swagger.yaml``` \n
+``` swagger-to-slate -i /home/user/Desktop/swagger.json``` 
+
+``` swagger-to-slate -i /home/user/Desktop/swagger.yaml``` 
+
 It will generate the output file in same path with same file name. Eg. swagger.md
 
-``` swagger-to-slate -i /home/user/Desktop/filename.json -o /home/user/Desktop/xyz.md```\n
+``` swagger-to-slate -i /home/user/Desktop/filename.json -o /home/user/Desktop/xyz.md```
+
 It will generate the output file in given path with given output file name.
 
 ## Authors
