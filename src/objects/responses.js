@@ -8,7 +8,8 @@ function parse(responses) {
     res.push('| ---- | ----------- |') 
 
     Object.keys(responses).map(response => {
-        res.push(`| ${response} | ${responses[response].description.replace(/[\r\n]/g, ' ') || ''} |`) 
+        let desc = responses[response] && responses[response].description || '';
+        res.push(`| ${response} | ${desc.replace(/[\r\n]/g, ' ') || ''} |`) 
     }) 
     return res.join('\n') 
 }
