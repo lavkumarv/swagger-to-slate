@@ -19,7 +19,7 @@ Your system must have node and npm install.
 ### Installing
 
 You can install this module using `npm install -g swagger-to-slate`.
-You need to install this module gloablly inorder to call it by name.
+You need to install this module globally in order to call it by name.
 
 ## use
 
@@ -37,7 +37,7 @@ You need to install this module gloablly inorder to call it by name.
 
 ``` swagger-to-slate -i /home/user/Desktop/swagger.yaml``` 
 
-It will generate the output file in same path with same file name. Eg. swagger.md
+It will generate the output file in the same path with same file name. Eg. swagger.md
 
 ``` swagger-to-slate -i /home/user/Desktop/filename.json -o /home/user/Desktop/xyz.md```
 
