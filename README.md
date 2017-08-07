@@ -47,6 +47,11 @@ It will generate the output file in given path with given output file name.
 
 * **Lav Kumar Vishwakarma** - *Initial work* - [lavkumarv](https://github.com/lavkumarv)
 
+## Contributors
+
+* **Daniel Henrique Joppi** - *Fixed patches* - [danieljoppi](https://github.com//danieljoppi)
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
